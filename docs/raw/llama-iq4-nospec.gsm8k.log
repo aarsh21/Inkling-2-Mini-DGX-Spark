@@ -1,0 +1,1 @@
+{"name": "llama-iq4-nospec", "n": 250, "correct": 243, "accuracy": 97.2, "mean_completion_tokens": 487, "truncated": 1, "errors": 0, "wall_s": 1477, "time": "2026-11-21T13:24:57"}

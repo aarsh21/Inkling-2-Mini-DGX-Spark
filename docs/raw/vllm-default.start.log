@@ -1,0 +1,5 @@
+[13:50:45] starting vllm as inkling2mini on :8000
+[13:50:46] waiting for /v1/models on :8000 (up to 2400s)
+[13:55:43] ready after 297s
+[13:55:46] smoke test passed (17 * 23 = 391)
+[13:55:46] serving 'inkling-2-mini' at http://<spark>:8000/v1   (logs: docker logs -f inkling2mini)

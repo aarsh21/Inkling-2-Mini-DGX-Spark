@@ -1,0 +1,1 @@
+{"name": "vllm-best", "n": 250, "correct": 243, "accuracy": 97.2, "mean_completion_tokens": 495, "truncated": 1, "errors": 0, "wall_s": 397, "time": "2026-11-21T11:00:53"}

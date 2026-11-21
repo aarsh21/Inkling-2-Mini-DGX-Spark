@@ -1,0 +1,8 @@
+[11:36:57] stopping the running recipe container first
+[11:36:57] draining inkling2mini for 10s
+[11:37:09] stopped inkling2mini
+[11:37:09] starting sglang as inkling2mini on :8000
+[11:37:10] waiting for /v1/models on :8000 (up to 2400s)
+[11:40:46] ready after 216s
+[11:40:47] smoke test passed (17 * 23 = 391)
+[11:40:47] serving 'inkling-2-mini' at http://<spark>:8000/v1   (logs: docker logs -f inkling2mini)

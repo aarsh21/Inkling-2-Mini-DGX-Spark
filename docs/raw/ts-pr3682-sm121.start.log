@@ -1,0 +1,63 @@
+[14:24:42] starting tokenspeed as inkling2mini on :8000
+[14:24:42] waiting for /v1/models on :8000 (up to 2400s)
+[ts]     attention = reserve_and_rebind(
+[ts]                 ^^^^^^^^^^^^^^^^^^^
+[ts]   File "/usr/local/lib/python3.12/dist-packages/tokenspeed/runtime/execution/cudagraph_memory.py", line 292, in reserve_and_rebind
+[ts]     attention = build_components(
+[ts]                 ^^^^^^^^^^^^^^^^^
+[ts]   File "/usr/lib/python3.12/contextlib.py", line 81, in inner
+[ts]     return func(*args, **kwds)
+[ts]            ^^^^^^^^^^^^^^^^^^^
+[ts]   File "/usr/local/lib/python3.12/dist-packages/tokenspeed/runtime/execution/device.py", line 1694, in build_components
+[ts]     return create_attn_components(
+[ts]            ^^^^^^^^^^^^^^^^^^^^^^^
+[ts]   File "/usr/local/lib/python3.12/dist-packages/tokenspeed/runtime/layers/attention/registry.py", line 1541, in create_attn_components
+[ts]     cache_setup = recipe.setup_for_layers(
+[ts]                   ^^^^^^^^^^^^^^^^^^^^^^^^
+[ts]   File "/usr/local/lib/python3.12/dist-packages/tokenspeed/runtime/layers/attention/kv_cache/recipes/base.py", line 251, in setup_for_layers
+[ts]     token_capacity=self.token_capacity(layout, num_lcm_blocks),
+[ts]                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[ts]   File "/usr/local/lib/python3.12/dist-packages/tokenspeed/runtime/layers/attention/kv_cache/recipes/inkling.py", line 152, in token_capacity
+[ts]     return self._capacity_from_parents(layout, num_lcm_blocks, upper_bound=upper)
+[ts]            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[ts]   File "/usr/local/lib/python3.12/dist-packages/tokenspeed/runtime/layers/attention/kv_cache/recipes/base.py", line 570, in _capacity_from_parents
+[ts]     raise ValueError(
+[ts] ValueError: num_lcm_blocks=3628 cannot admit one token with the configured inkling cache scheduler limits
+[ts] 
+[ts] [38;20m[2026-11-21 08:59:53,586 ] - INFO - received signal 10; terminating scheduler(s) (engine.py:364)[0m
+[ts] [2m2026-11-21T08:59:53.587262Z[0m [32m INFO[0m [2m_host[0m[2m:[0m SIGTERM: stopping
+[ts] Traceback (most recent call last):
+[ts]   File "/usr/local/lib/python3.12/dist-packages/tokenspeed/runtime/utils/process.py", line 200, in receive_ready_messages
+[ts]     message = reader.recv()
+[ts]               ^^^^^^^^^^^^^
+[ts]   File "/usr/lib/python3.12/multiprocessing/connection.py", line 250, in recv
+[ts]     buf = self._recv_bytes()
+[ts]           ^^^^^^^^^^^^^^^^^^
+[ts]   File "/usr/lib/python3.12/multiprocessing/connection.py", line 430, in _recv_bytes
+[ts]     buf = self._recv(4)
+[ts]           ^^^^^^^^^^^^^
+[ts]   File "/usr/lib/python3.12/multiprocessing/connection.py", line 399, in _recv
+[ts]     raise EOFError
+[ts] EOFError
+[ts] 
+[ts] During handling of the above exception, another exception occurred:
+[ts] 
+[ts] Traceback (most recent call last):
+[ts]   File "<frozen runpy>", line 198, in _run_module_as_main
+[ts]   File "<frozen runpy>", line 88, in _run_code
+[ts]   File "/usr/local/lib/python3.12/dist-packages/tokenspeed/runtime/entrypoints/engine.py", line 469, in <module>
+[ts]     run_scheduler_headless_from_cli()
+[ts]   File "/usr/local/lib/python3.12/dist-packages/tokenspeed/runtime/entrypoints/engine.py", line 465, in run_scheduler_headless_from_cli
+[ts]     launch_scheduler_headless(server_args)
+[ts]   File "/usr/local/lib/python3.12/dist-packages/tokenspeed/runtime/entrypoints/engine.py", line 422, in launch_scheduler_headless
+[ts]     for data in receive_ready_messages(scheduler_pipe_readers, scheduler_procs):
+[ts]                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[ts]   File "/usr/local/lib/python3.12/dist-packages/tokenspeed/runtime/utils/process.py", line 202, in receive_ready_messages
+[ts]     _raise_process_died(procs, index)
+[ts]   File "/usr/local/lib/python3.12/dist-packages/tokenspeed/runtime/utils/process.py", line 216, in _raise_process_died
+[ts]     raise RuntimeError(
+[ts] RuntimeError: Scheduler process 0 (pid 188) exited or closed its ready pipe before startup finished (exit code None). Please check if there are relevant logs.
+[smg] 2026-11-21 08:59:54  WARN smg::routers::common::placement: model_gateway/src/routers/common/placement.rs:963: No available workers for model function="WorkerSelectionStage::execute" request_id="chatcmpl-bDchiT9MTXQw7iiYJs2881gd" mode=Regular model_id="/model" reason="All workers for model '/model' are unavailable (unhealthy or circuit breaker open)" workers=1 available=0 pool=regular 0/1 available (0 healthy) suppressed=0
+startup failed: ts subprocess exited with rc=1 during startup; see [ts] log lines above for the cause
+[smg] 2026-11-21 08:59:59  WARN smg::routers::common::placement: model_gateway/src/routers/common/placement.rs:963: No available workers for model function="WorkerSelectionStage::execute" request_id="chatcmpl-yQSrSJvrWcS3LcGUx6aiyDdA" mode=Regular model_id="/model" reason="All workers for model '/model' are unavailable (unhealthy or circuit breaker open)" workers=1 available=0 pool=regular 0/1 available (0 healthy) suppressed=0
+[E_START] the container exited

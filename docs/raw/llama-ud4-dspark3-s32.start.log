@@ -1,0 +1,40 @@
+dspark-Inkling-2-Mini-Q8_0.gguf: OK
+Inkling-2-Mini-UD-Q4_K_XL.gguf: OK
+/tmp/tmp.MIhCbKEup4/llama.tar.gz: 252263504 bytes, 8 chunks left
+COMPLETE /tmp/tmp.MIhCbKEup4/llama.tar.gz
+/tmp/tmp.MIhCbKEup4/llama.tar.gz: OK
+#0 building with "default" instance using docker driver
+
+#1 [internal] load build definition from Dockerfile
+#1 transferring dockerfile: 231B done
+#1 DONE 0.0s
+
+#2 [internal] load metadata for ghcr.io/ggml-org/llama.cpp:server-cuda13@sha256:c5576f106d1ef86fe31148640281ae82fe327e9562b2abc7399dc94c82aa2b3d
+#2 DONE 3.0s
+
+#3 [internal] load .dockerignore
+#3 transferring context: 2B done
+#3 DONE 0.0s
+
+#4 [1/2] FROM ghcr.io/ggml-org/llama.cpp:server-cuda13@sha256:c5576f106d1ef86fe31148640281ae82fe327e9562b2abc7399dc94c82aa2b3d
+#4 resolve ghcr.io/ggml-org/llama.cpp:server-cuda13@sha256:c5576f106d1ef86fe31148640281ae82fe327e9562b2abc7399dc94c82aa2b3d 0.0s done
+#4 CACHED
+
+#5 [internal] load build context
+#5 transferring context: 305.25MB 0.6s done
+#5 DONE 0.6s
+
+#6 [2/2] COPY bin/ /app/
+#6 DONE 0.2s
+
+#7 exporting to image
+#7 exporting layers
+#7 exporting layers 0.4s done
+#7 writing image sha256:932fdcdc202130db8f27738316f006836fbdfbaacddfa504ed5c0c1f69e7937e done
+#7 naming to docker.io/library/llama-cpp-inkling2mini:unsloth-b12588 done
+#7 DONE 0.5s
+[12:49:57] starting llamacpp as inkling2mini on :8000
+[12:49:58] waiting for /v1/models on :8000 (up to 2400s)
+[12:50:03] ready after 5s
+[12:50:04] smoke test passed (17 * 23 = 391)
+[12:50:04] serving 'inkling-2-mini' at http://<spark>:8000/v1   (logs: docker logs -f inkling2mini)

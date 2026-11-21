@@ -1,0 +1,13 @@
+diff --git a/tokenspeed-kernel/python/tokenspeed_kernel/ops/gemm/triton_skinny.py b/tokenspeed-kernel/python/tokenspeed_kernel/ops/gemm/triton_skinny.py
+index 17acb073..f624c639 100644
+--- a/tokenspeed-kernel/python/tokenspeed_kernel/ops/gemm/triton_skinny.py
++++ b/tokenspeed-kernel/python/tokenspeed_kernel/ops/gemm/triton_skinny.py
+@@ -164,6 +164,8 @@ def skinny_mm_supported(x: torch.Tensor, weight: torch.Tensor) -> bool:
+     return (
+         current_platform().is_nvidia
+         and x.is_cuda
++        # Its tiles need ~147 KB of shared memory; sm_12x (GB10, RTX 50) has 99 KB.
++        and torch.cuda.get_device_capability(x.device)[0] != 12
+         and x.dtype == torch.bfloat16
+         and weight.dtype == torch.bfloat16
+         and x.ndim == 2

@@ -1,0 +1,10 @@
+[12:17:32] stopping the running recipe container first
+[12:17:32] draining inkling2mini for 10s
+[12:17:42] stopped inkling2mini
+Inkling-2-Mini-IQ4_NL.gguf: OK
+dspark-Inkling-2-Mini-Q8_0.gguf: OK
+[12:17:50] starting llamacpp as inkling2mini on :8000
+[12:17:50] waiting for /v1/models on :8000 (up to 2400s)
+[12:17:55] ready after 5s
+[12:17:57] smoke test passed (17 * 23 = 391)
+[12:17:57] serving 'inkling-2-mini' at http://<spark>:8000/v1   (logs: docker logs -f inkling2mini)

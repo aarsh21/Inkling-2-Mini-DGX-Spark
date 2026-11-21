@@ -1,0 +1,1 @@
+{"name": "vllm-default", "workload": "chat", "n": 28, "rounds": 2, "requests": 56, "fail": 0, "time": "2026-11-21T13:59:09", "agg_tok_s": 297.0, "user_tok_s_p50": 12.0, "user_tok_s_p10": 10.4, "ttft_p50_s": 3.09, "ttft_p95_s": 4.41, "max_gap_p95_s": 1.33, "mean_completion_tokens": 993, "mean_prompt_tokens": 36, "slo": true}

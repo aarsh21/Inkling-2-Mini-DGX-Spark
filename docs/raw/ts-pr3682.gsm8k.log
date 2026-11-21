@@ -1,0 +1,1 @@
+{"name": "ts-pr3682", "n": 250, "correct": 242, "accuracy": 96.8, "mean_completion_tokens": 444, "truncated": 1, "errors": 0, "wall_s": 986, "time": "2026-11-21T15:09:49"}

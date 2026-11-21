@@ -1,0 +1,5 @@
+{"name": "vllm-best", "n": 250, "correct": 243, "accuracy": 97.2, "mean_completion_tokens": 495, "truncated": 1, "errors": 0, "wall_s": 397, "time": "2026-11-21T11:00:53"}
+{"name": "vllm-fp8kv", "n": 250, "correct": 243, "accuracy": 97.2, "mean_completion_tokens": 515, "truncated": 2, "errors": 0, "wall_s": 337, "time": "2026-11-21T11:36:57"}
+{"name": "sglang-best", "n": 250, "correct": 243, "accuracy": 97.2, "mean_completion_tokens": 483, "truncated": 1, "errors": 0, "wall_s": 378, "time": "2026-11-21T12:04:04"}
+{"name": "llama-iq4-nospec", "n": 250, "correct": 243, "accuracy": 97.2, "mean_completion_tokens": 487, "truncated": 1, "errors": 0, "wall_s": 1477, "time": "2026-11-21T13:24:57"}
+{"name": "ts-pr3682", "n": 250, "correct": 242, "accuracy": 96.8, "mean_completion_tokens": 444, "truncated": 1, "errors": 0, "wall_s": 986, "time": "2026-11-21T15:09:49"}

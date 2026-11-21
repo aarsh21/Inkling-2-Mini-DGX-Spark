@@ -1,0 +1,5 @@
+[14:32:08] starting tokenspeed as inkling2mini on :8000
+[14:32:08] waiting for /v1/models on :8000 (up to 2400s)
+[14:41:32] ready after 564s
+[14:41:35] smoke test passed (17 * 23 = 391)
+[14:41:35] serving 'inkling-2-mini' at http://<spark>:8000/v1   (logs: docker logs -f inkling2mini)

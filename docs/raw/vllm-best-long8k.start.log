@@ -1,0 +1,8 @@
+[11:00:53] stopping the running recipe container first
+[11:00:53] draining inkling2mini for 10s
+[11:01:06] stopped inkling2mini
+[11:01:06] starting vllm as inkling2mini on :8000
+[11:01:06] waiting for /v1/models on :8000 (up to 2400s)
+[11:06:09] ready after 303s
+[11:06:11] smoke test passed (17 * 23 = 391)
+[11:06:11] serving 'inkling-2-mini' at http://<spark>:8000/v1   (logs: docker logs -f inkling2mini)

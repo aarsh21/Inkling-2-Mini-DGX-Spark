@@ -1,0 +1,5 @@
+[09:19:46] starting sglang as inkling2mini on :8000
+[09:19:46] waiting for /v1/models on :8000 (up to 2400s)
+[09:25:28] ready after 342s
+[09:25:31] smoke test passed (17 * 23 = 391)
+[09:25:31] serving 'inkling-2-mini' at http://<spark>:8000/v1   (logs: docker logs -f inkling2mini)

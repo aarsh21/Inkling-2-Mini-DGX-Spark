@@ -1,0 +1,1 @@
+{"name": "vllm-fp8kv", "n": 250, "correct": 243, "accuracy": 97.2, "mean_completion_tokens": 515, "truncated": 2, "errors": 0, "wall_s": 337, "time": "2026-11-21T11:36:57"}

@@ -1,0 +1,1 @@
+{"name": "llama-iq4-nospec-gate", "workload": "chat", "n": 1, "rounds": 2, "requests": 2, "fail": 0, "time": "2026-11-21T13:00:19", "agg_tok_s": 35.8, "user_tok_s_p50": 36.0, "user_tok_s_p10": 36.0, "ttft_p50_s": 0.2, "ttft_p95_s": 0.26, "max_gap_p95_s": 0.04, "mean_completion_tokens": 1024, "mean_prompt_tokens": 37, "slo": true}
