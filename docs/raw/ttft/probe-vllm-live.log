@@ -1,0 +1,4 @@
+{"name": "vllm-live", "c": 1, "ok": 2, "fail": 0, "prompt": 6227, "cached": null, "ttft_p50": 5.4, "ttft_p95": 5.4, "answer_p50": 10.69, "user_p50": 61.2, "user_p10": 59.5, "agg": 39.0, "out_tok_mean": 310}
+{"name": "vllm-live", "c": 4, "ok": 8, "fail": 0, "prompt": 6230, "cached": null, "ttft_p50": 0.36, "ttft_p95": 0.36, "answer_p50": 7.83, "user_p50": 37.3, "user_p10": 32.9, "agg": 95.6, "out_tok_mean": 249}
+{"name": "vllm-live", "c": 8, "ok": 16, "fail": 0, "prompt": 6224, "cached": null, "ttft_p50": 1.85, "ttft_p95": 1.86, "answer_p50": 5.96, "user_p50": 34.1, "user_p10": 29.6, "agg": 153.6, "out_tok_mean": 165}
+{"name": "vllm-live", "c": 16, "ok": 32, "fail": 0, "prompt": 6224, "cached": null, "ttft_p50": 3.92, "ttft_p95": 4.07, "answer_p50": 11.1, "user_p50": 26.3, "user_p10": 23.0, "agg": 212.5, "out_tok_mean": 215}

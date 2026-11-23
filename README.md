@@ -33,6 +33,10 @@ and TTFT p95 ≤ 5 s (chat workload, ~1K-token replies, default reasoning, tempe
   instead of slowing everyone below 10 tok/s; `MAX_SEQS=64` admits 64, the slowest at ~6.5 tok/s, for 445 tok/s in total.
 - **Long prompts (8K tokens, agents, RAG): use `./start.sh sglang`.** It starts an 8K reply in 2.5 s vs
   7.9 s on vLLM and prefills about twice as fast; prefill, not memory, limits long-prompt traffic.
+- **Fastest first token: `./start.sh sglang` with [knapcio's GB10 overlays](https://github.com/knapcio/Inkling-2-Mini-1x-DGX-Spark)**
+  (on by default since 2026-11-23). It answers a cached 6K-token system prompt in 0.28-0.88 s for 1-24 users,
+  starts a fresh 8K document in 1.4 s, and gives 16-21% more aggregate tok/s than stock SGLang at 16-24 users.
+  GSM8K is unchanged at 97.2%. See [docs/TTFT.md](docs/TTFT.md).
 - **Batch jobs:** `SPEC=none` on vLLM gives the highest throughput (474 tok/s at 96 users, ~5 tok/s each).
 - DSpark is the biggest lever: without it no engine holds 10 tok/s past 16 users. It only runs at the
   checkpoint's trained block (7 drafts); shorter drafts and loop sharing are refused for this checkpoint.
